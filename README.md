@@ -1,6 +1,8 @@
 # PowerBI-AngularJS
 A demo AngularJS SPA accessing Power BI REST APIs
 
+advantage: no backend to maintain
+
 Register your app: https://dev.powerbi.com/apps
 
 Create New Website using Templates > JavaScript > Blank Azure Node.js Web Application
