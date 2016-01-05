@@ -1,0 +1,24 @@
+{
+  "name": "PowerBI-AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/maitre-matt/PowerBI-AngularJS",
+  "authors": [
+    "Matthieu Maitre <mmaitre@microsoft.com>"
+  ],
+  "description": "Power BI Angular JS SPA",
+  "main": "index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "Apache 2",
+  "dependencies": {
+    "angular": "~1.4.8",
+    "requirejs-domready": "~2.0.1",
+    "requirejs": "~2.1.22",
+    "adal-angular": "~1.0.7",
+    "bootstrap": "~3.3.6",
+    "fontawesome": "~4.5.0",
+    "angular-route": "~1.4.8",
+    "require-css": "~0.1.8"
+  }
+}

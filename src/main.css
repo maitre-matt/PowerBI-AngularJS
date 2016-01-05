@@ -1,0 +1,8 @@
+﻿.panel-scroll {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.text-color-error {
+  color: #e74c3c;
+}

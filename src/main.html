@@ -1,0 +1,78 @@
+﻿<div ng-controller="Main" class="container">
+
+    <h1>Power BI</h1>
+
+    <!--
+    List Workspaces
+    -->
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Workspaces
+            <i ng-show="!workspaces && !workspaceError" class="fa fa-spinner fa-spin"></i>
+            <i ng-show="workspaceError" class="fa fa-warning text-color-error" data-toggle="tooltip" data-placement="left" title="{{workspaceError}}"></i>
+        </div>
+
+        <div ng-show="workspaces" class="panel-scroll">
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>ID</th>
+                </tr>
+                <tr ng-repeat="workspace in workspaces">
+                    <td>{{workspace.name}}</td>
+                    <td>{{workspace.id}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--
+    List Reports
+    -->
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Reports
+            <select ng-show="workspaces" ng-model="selectedWorkspace">
+                <option ng-repeat="workspace in workspaces" value="{{workspace.id}}">{{workspace.name}}</option>
+            </select>
+            <i ng-show="!reports && !reportError" class="fa fa-spinner fa-spin"></i>
+            <i ng-show="reportError" class="fa fa-warning text-color-error" data-toggle="tooltip" data-placement="left" title="{{reportError}}"></i>
+        </div>
+
+        <div ng-show="reports" class="panel-scroll">
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>ID</th>
+                    <th>Embedding URL</th>
+                </tr>
+                <tr ng-repeat="report in reports">
+                    <td><a href="{{report.webUrl}}">{{report.name}}</a></td>
+                    <td>{{report.id}}</td>
+                    <td>{{report.embedUrl}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--
+    Embed Report
+    -->
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Embedded Report
+            <select ng-show="reports" ng-model="selectedReport">
+                <option ng-repeat="report in reports" value="{{report.embedUrl}}">{{report.name}}</option>
+            </select>
+            <i ng-show="!reports && !reportError" class="fa fa-spinner fa-spin"></i>
+        </div>
+
+        <div class="row">
+            <iframe id="report" ng-show="selectedReport" src="{{selectedReport}}" frameborder="0" seamless style="height: 400px;" class="col-sm-12"></iframe>
+        </div>
+    </div>
+
+</div>
