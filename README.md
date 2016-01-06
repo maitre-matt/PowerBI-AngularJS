@@ -1,4 +1,4 @@
-An AngularJS SPA demo of access to Power BI REST APIs. 
+An AngularJS SPA demoing access to Power BI REST APIs and integrating with Power BI reports. 
 
 ![SPA](http://mmaitre314.github.io/images/pbi.jpg)
 
